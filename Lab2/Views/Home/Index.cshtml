@@ -1,0 +1,40 @@
+﻿@model Lab2.Models.CourseModel
+@{
+    ViewData["title"] = "Start";
+}
+
+<div class="container">
+    <h1>@ViewBag.h1</h1>
+    <p>@ViewData["Message"]</p>
+
+    <form method="post">
+        <div class="row">
+            <div asp-validation-summary="ModelOnly"></div>
+        </div>
+        <div class="form-row">
+            <div class="col-auto">
+                <input class="form-control" placeholder="Code" asp-for="Code" />
+                <span asp-validation-for="Code" class="badge badge-pill badge-danger"></span>
+            </div>
+
+            <div class="col-auto">
+                <input class="form-control" placeholder="Name" asp-for="Name" />
+                <span asp-validation-for="Name" class="badge badge-pill badge-danger"></span>
+            </div>
+
+            <div class="col-auto">
+                <input class="form-control" placeholder="Url" asp-for="Url" />
+                <span asp-validation-for="Url" class="badge badge-pill badge-danger"></span>
+            </div>
+
+            <div class="col-auto">
+                <input class="form-control" placeholder="Progression" asp-for="Progression" />
+                <span asp-validation-for="Progression" class="badge badge-pill badge-danger"></span>
+            </div>
+
+            <div class="col-auto">
+                <input class="btn btn-primary mb-2" type="submit" value="Lägg till kurs" />
+            </div>
+        </div>
+    </form>
+</div>

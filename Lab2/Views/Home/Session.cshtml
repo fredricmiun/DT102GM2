@@ -1,0 +1,46 @@
+﻿@model IEnumerable<Lab2.Models.CourseModel>
+@{
+    ViewData["title"] = "Data";
+}
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h1>@ViewBag.h1</h1>
+                <p>@ViewData["Message"]</p>
+
+                <h2>Session</h2>
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        @ViewBag.sessionText
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <h2>Kurser</h2>
+
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Code</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Url</th>
+                            <th scope="col">Progression</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var course in Model)
+                        {
+                            <tr>
+                                <th scope="row">@course.Code</th>
+                                <td>@course.Name</td>
+                                <td><a href="@course.Url">@course.Url</a></td>
+                                <td>@course.Progression</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>

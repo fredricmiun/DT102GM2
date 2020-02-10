@@ -1,0 +1,23 @@
+﻿@model Lab2.Models.AboutModel
+@{
+    ViewData["title"] = "About";
+}
+
+<div class="container">
+        <h1>@Model.Header</h1>
+        <p>@Model.Intro</p>
+        <ul class="list-group">
+            <li class="list-group-item">
+                First name: @Html.DisplayFor(model => model.FirstName)
+            </li>
+            <li class="list-group-item">
+                Last name: @Html.DisplayFor(model => model.Surname)
+            </li>
+            <li class="list-group-item">
+                @Html.DisplayNameFor(model => model.Age): @Html.DisplayFor(model => model.Age)
+            </li>
+            <li class="list-group-item">
+                @Html.DisplayNameFor(model => model.City): @Html.DisplayFor(model => model.City)
+            </li>
+        </ul>
+</div>
