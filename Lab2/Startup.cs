@@ -16,6 +16,7 @@ namespace Lab2
         {
             services.AddControllersWithViews(); // Här aktiverar vi MVC för projektet
 
+            // Sessioner
             services.AddDistributedMemoryCache();
 
             services.AddSession(options =>
@@ -34,7 +35,7 @@ namespace Lab2
 
             app.UseRouting();
             app.UseStaticFiles(); // Aktivera wwwroot
-            app.UseSession();
+            app.UseSession(); // Sessioner
 
             app.UseEndpoints(endpoints =>
             {
